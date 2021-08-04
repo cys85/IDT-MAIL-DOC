@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>ExecutionCycle 执行循环组件 | 倚天内部邮局系统</title>
+    <meta name="generator" content="VuePress 1.8.2">
+    
+    <meta name="description" content="开发帮助文档">
+    
+    <link rel="preload" href="/IDT-MAIL-DOC/assets/css/0.styles.6e236aed.css" as="style"><link rel="preload" href="/IDT-MAIL-DOC/assets/js/app.21487023.js" as="script"><link rel="preload" href="/IDT-MAIL-DOC/assets/js/2.4b30bbc8.js" as="script"><link rel="preload" href="/IDT-MAIL-DOC/assets/js/17.6b036a7b.js" as="script"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/10.5cb3b6d1.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/11.54c624eb.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/12.5579f3a5.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/13.52c3f112.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/14.6356f32d.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/15.990c0e83.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/16.c59184c8.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/18.d56fa53f.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/19.b21c622d.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/20.aeddee35.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/21.3d63f040.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/22.e8575352.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/23.3764ba3e.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/24.eaf16344.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/25.b599cdb7.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/26.c07e9335.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/27.55a93107.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/28.9da69d7f.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/29.403e57ba.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/3.739855ab.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/30.505a654f.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/31.0f0bf4bd.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/32.0f9f691c.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/33.bcf4141b.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/34.f58c04df.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/35.d25f25b4.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/36.4d63122a.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/37.423236f0.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/38.348666bb.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/39.cdbb59fb.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/4.22ad9d9c.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/40.084b7d5c.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/41.5e9f3cbf.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/42.40e8843a.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/43.ae0e3a1a.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/44.06fda921.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/45.dfe0ede1.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/46.3125e99b.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/47.a0540d05.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/48.d21b2983.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/49.51d5d891.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/5.63ae15b0.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/50.fbdabfcd.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/51.3161d9c4.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/52.ce42df03.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/53.6b0778fc.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/54.78191a38.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/55.3a633e8d.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/56.8044e118.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/57.d5e71bbf.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/58.929087f0.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/59.47bf5353.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/6.1e5bfe3f.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/60.40003a77.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/61.510e7e41.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/7.340c28cf.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/8.d813f35d.js"><link rel="prefetch" href="/IDT-MAIL-DOC/assets/js/9.56bf5c53.js">
+    <link rel="stylesheet" href="/IDT-MAIL-DOC/assets/css/0.styles.6e236aed.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/IDT-MAIL-DOC/" class="home-link router-link-active"><!----> <span class="site-name">倚天内部邮局系统</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/IDT-MAIL-DOC/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/standard/" class="nav-link">
+  规范
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/component/" class="nav-link router-link-active">
+  组件
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/routes/" class="nav-link">
+  路由
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/common/" class="nav-link">
+  通用
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/users/" class="nav-link">
+  成员
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/IDT-MAIL-DOC/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/guide/" class="nav-link">
+  指南
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/standard/" class="nav-link">
+  规范
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/api/" class="nav-link">
+  API
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/component/" class="nav-link router-link-active">
+  组件
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/routes/" class="nav-link">
+  路由
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/common/" class="nav-link">
+  通用
+</a></div><div class="nav-item"><a href="/IDT-MAIL-DOC/users/" class="nav-link">
+  成员
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>基础组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/IDT-MAIL-DOC/component/address-book-add-group-btn.html" class="sidebar-link">AddressBookAddGroupBtn 通讯录新增分组按钮组件</a></li><li><a href="/IDT-MAIL-DOC/component/address-book-card.html" class="sidebar-link">AddressBookCard 通讯录card组件</a></li><li><a href="/IDT-MAIL-DOC/component/background-card.html" class="sidebar-link">BackgroundCard 背景卡片组件</a></li><li><a href="/IDT-MAIL-DOC/component/background.html" class="sidebar-link">Background 背景组件</a></li><li><a href="/IDT-MAIL-DOC/component/class-type.html" class="sidebar-link">ClassType 分类组件</a></li><li><a href="/IDT-MAIL-DOC/component/class-type2.html" class="sidebar-link">ClassType2 分类组件2</a></li><li><a href="/IDT-MAIL-DOC/component/custom-folder.html" class="sidebar-link">CustomFolder 自定义文件夹组件</a></li><li><a href="/IDT-MAIL-DOC/component/folder-checkbox-group.html" class="sidebar-link">FolderCheckboxGroup 文件夹多选器</a></li><li><a href="/IDT-MAIL-DOC/component/form-item-description.html" class="sidebar-link">FormItemDescription 表单字段描述组件</a></li><li><a href="/IDT-MAIL-DOC/component/mail-card.html" class="sidebar-link">MailCard 邮件card组件</a></li><li><a href="/IDT-MAIL-DOC/component/mail-content.html" class="sidebar-link">MailContent 邮件内容组件</a></li><li><a href="/IDT-MAIL-DOC/component/mail-reading-status.html" class="sidebar-link">MailReadingStatus 邮件读取状态组件</a></li><li><a href="/IDT-MAIL-DOC/component/message-reminder-settings.html" class="sidebar-link">MessageReminderSettings 消息提醒设置组件</a></li><li><a href="/IDT-MAIL-DOC/component/page-record.html" class="sidebar-link">PageRecord 页数记录组件</a></li><li><a href="/IDT-MAIL-DOC/component/send-and-receive-time.html" class="sidebar-link">SendAndReceiveTime 收发时间组件</a></li><li><a href="/IDT-MAIL-DOC/component/star-man-text.html" class="sidebar-link">StarManText 星标人文本组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-card.html" class="sidebar-link">TheCard 卡片组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-group.html" class="sidebar-link">TheGroup 分组组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-icon.html" class="sidebar-link">TheIcon 图标组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-logo.html" class="sidebar-link">TheLogo logo组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-menu.html" class="sidebar-link">TheMenu 菜单组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-notification.html" class="sidebar-link">TheNotification 通知组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-pagination.html" class="sidebar-link">ThePagination 分页组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-table.html" class="sidebar-link">TheTable 表格组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-timeline.html" class="sidebar-link">TheTimeline 时间轴组件</a></li><li><a href="/IDT-MAIL-DOC/component/time-horizon.html" class="sidebar-link">TimeHorizon 时间范围组件</a></li><li><a href="/IDT-MAIL-DOC/component/user-panel.html" class="sidebar-link">UserPanel 用户面板组件</a></li><li><a href="/IDT-MAIL-DOC/component/write-mail.html" class="sidebar-link">WriteMail 写邮件按钮组件</a></li><li><a href="/IDT-MAIL-DOC/component/background.html" class="sidebar-link">Background 背景组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-addressees.html" class="sidebar-link">TheAddressees 收件人集合组件</a></li><li><a href="/IDT-MAIL-DOC/component/user-select.html" class="sidebar-link">UserSelect 选择用户组件</a></li><li><a href="/IDT-MAIL-DOC/component/user-transfer-select.html" class="sidebar-link">UserTransferSelect 用户穿梭选择组件</a></li><li><a href="/IDT-MAIL-DOC/component/the-ueditor.html" class="sidebar-link">TheUeditor 富文本编辑器组件</a></li><li><a href="/IDT-MAIL-DOC/component/execution-cycle.html" aria-current="page" class="active sidebar-link">ExecutionCycle 执行循环组件</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/IDT-MAIL-DOC/component/execution-cycle.html#使用例子" class="sidebar-link">使用例子</a></li><li class="sidebar-sub-header"><a href="/IDT-MAIL-DOC/component/execution-cycle.html#组件源码" class="sidebar-link">组件源码</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>业务组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/IDT-MAIL-DOC/component/delay-sending-setting.html" class="sidebar-link">DelaySendingSetting 延迟发送设置组件</a></li><li><a href="/IDT-MAIL-DOC/component/login-form.html" class="sidebar-link">LoginForm 登录表单组件</a></li><li><a href="/IDT-MAIL-DOC/component/mail-capacity.html" class="sidebar-link">MailCapacity 邮件容量组件</a></li><li><a href="/IDT-MAIL-DOC/component/password-setting.html" class="sidebar-link">PasswordSetting 密码设置组件</a></li><li><a href="/IDT-MAIL-DOC/component/personal-information-settings.html" class="sidebar-link">PersonalInformationSettings 个人设置组件</a></li><li><a href="/IDT-MAIL-DOC/component/receipt-settings.html" class="sidebar-link">ReceiptSettings 回执设置表单组件</a></li></ul></section></li><li><section class="sidebar-group depth-0"><p class="sidebar-heading"><span>私有组件</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/IDT-MAIL-DOC/component/address-book-card-btns.html" class="sidebar-link">AddressBookCardBtns 通讯录card按钮组组件</a></li><li><a href="/IDT-MAIL-DOC/component/shipment-analysis-table.html" class="sidebar-link">ShipmentAnalysisTable 发件分析表格组件</a></li><li><a href="/IDT-MAIL-DOC/component/incoming-analysis-table.html" class="sidebar-link">IncomingAnalysisTable 收件分析表格组件</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="executioncycle-执行循环组件"><a href="#executioncycle-执行循环组件" class="header-anchor">#</a> ExecutionCycle 执行循环组件</h1> <h2 id="使用例子"><a href="#使用例子" class="header-anchor">#</a> 使用例子</h2> <h3 id="图例"><a href="#图例" class="header-anchor">#</a> 图例</h3> <p><img src="data:image/jpeg;base64,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" alt="TimeHorizon"></p> <h3 id="图例代码"><a href="#图例代码" class="header-anchor">#</a> 图例代码</h3> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>execution-cycle</span>
+      <span class="token attr-name">:value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>value<span class="token punctuation">&quot;</span></span>
+    <span class="token punctuation">/&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token comment">/**
+ * @author 陈政
+ * @date 2021-08-04
+ * @description 执行循环测试
+ * @Url http://localhost:8080/IDT-Email/#/ExecutionCycle.example?VNK=160bb8ae
+ * @prop
+ * @event
+ */</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> Vue <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ExecutionCycle <span class="token keyword">from</span> <span class="token string">'@/components/ExecutionCycle'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+  components<span class="token operator">:</span> <span class="token punctuation">{</span>
+    ExecutionCycle<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">ExecutionCycleExample</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+  units <span class="token operator">=</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">{</span> label<span class="token operator">:</span> <span class="token string">'天'</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token string">'day'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> label<span class="token operator">:</span> <span class="token string">'时'</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token string">'hour'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">{</span> label<span class="token operator">:</span> <span class="token string">'分'</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token string">'minute'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span>
+
+  value<span class="token operator">=</span><span class="token punctuation">{</span>
+    num<span class="token operator">:</span> <span class="token number">8</span><span class="token punctuation">,</span>
+    unit<span class="token operator">:</span> <span class="token string">'day'</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">$watch</span><span class="token punctuation">(</span><span class="token string">'value'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">n<span class="token punctuation">,</span> o</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> deep<span class="token operator">:</span> <span class="token boolean">true</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>less<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div><h2 id="组件源码"><a href="#组件源码" class="header-anchor">#</a> 组件源码</h2> <div class="language-vue extra-class"><pre class="language-vue"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>execution-cycle<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>execution-cycle__word1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>每<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>execution-cycle__input<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-input</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>form.num<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-input</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>execution-cycle__select<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-select</span> <span class="token attr-name">v-model</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>form.unit<span class="token punctuation">&quot;</span></span> <span class="token attr-name">placeholder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>请选择<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>el-option</span> <span class="token attr-name">v-for</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item in units<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:key</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.value<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:label</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.label<span class="token punctuation">&quot;</span></span> <span class="token attr-name">:value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>item.value<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-option</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-select</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>execution-cycle__word2<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>执行一次<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>ts<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token comment">/**
+ * @author 陈政
+ * @date 2021-08-04
+ * @description 执行循环组件
+ * @prop { object } value - 缺省值 支持v-model
+ * @prop { number } value.num - 数量
+ * @prop { string } value.unit - 单位
+ * @prop { object[] } units - 备选单位集合
+ * @prop { string } units[].label - 备选单位显示值
+ * @prop { string } units[].value - 备选单位实际值
+ * @prop { boolean } isDefault - 缺省选中 true：为缺省选中，缺失或false为非缺省
+ * @event
+ */</span>
+<span class="token keyword">import</span> <span class="token punctuation">{</span> Component<span class="token punctuation">,</span> Prop<span class="token punctuation">,</span> Vue <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">'vue-property-decorator'</span><span class="token punctuation">;</span>
+
+@<span class="token function">Component</span><span class="token punctuation">(</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token keyword">class</span> <span class="token class-name">ExecutionCycle</span> <span class="token keyword">extends</span> <span class="token class-name">Vue</span> <span class="token punctuation">{</span>
+  @<span class="token function">Prop</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token keyword">default</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">[</span><span class="token punctuation">{</span> label<span class="token operator">:</span> <span class="token string">'天'</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token string">'day'</span> <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">{</span> label<span class="token operator">:</span> <span class="token string">'月'</span><span class="token punctuation">,</span> value<span class="token operator">:</span> <span class="token string">'month'</span> <span class="token punctuation">}</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span> units<span class="token operator">!</span><span class="token operator">:</span> Array<span class="token operator">&lt;</span>Record<span class="token operator">&lt;</span>string<span class="token punctuation">,</span> unknown<span class="token operator">&gt;&gt;</span><span class="token punctuation">;</span>
+
+  @<span class="token function">Prop</span><span class="token punctuation">(</span><span class="token punctuation">)</span> value<span class="token operator">!</span><span class="token operator">:</span> Record<span class="token operator">&lt;</span>string<span class="token punctuation">,</span> unknown<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+
+  form <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+
+  <span class="token function">created</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>form <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>value<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">&quot;</span>less<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+<span class="token selector">.execution-cycle</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> auto<span class="token punctuation">;</span>
+  <span class="token property">height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+  <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+  <span class="token selector">.el-input,
+  .el-input__inner</span> <span class="token punctuation">{</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.execution-cycle__input</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 70px<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.execution-cycle__select</span> <span class="token punctuation">{</span>
+  <span class="token property">width</span><span class="token punctuation">:</span> 70px<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.execution-cycle__word1</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #333<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">.execution-cycle__word2</span> <span class="token punctuation">{</span>
+  <span class="token property">color</span><span class="token punctuation">:</span> #333<span class="token punctuation">;</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> 16px<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> 40px<span class="token punctuation">;</span>
+  <span class="token property">white-space</span><span class="token punctuation">:</span> nowrap<span class="token punctuation">;</span>
+  <span class="token property">margin-left</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/IDT-MAIL-DOC/component/the-ueditor.html" class="prev">
+        TheUeditor 富文本编辑器组件
+      </a></span> <span class="next"><a href="/IDT-MAIL-DOC/component/delay-sending-setting.html">
+        DelaySendingSetting 延迟发送设置组件
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/IDT-MAIL-DOC/assets/js/app.21487023.js" defer></script><script src="/IDT-MAIL-DOC/assets/js/2.4b30bbc8.js" defer></script><script src="/IDT-MAIL-DOC/assets/js/17.6b036a7b.js" defer></script>
+  </body>
+</html>
